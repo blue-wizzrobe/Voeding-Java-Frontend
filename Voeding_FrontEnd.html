@@ -1,0 +1,50 @@
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        document.getElementById("deknop").addEventListener('click', function(){
+            var xhr = new XMLHttpRequest();  //1e
+            
+            var getypt = document.getElementById('input');
+            console.log("Je hebt " + getypt.value + " getypt");
+
+            xhr.onreadystatechange = function (){ 
+                
+                //console.log("terug van de server"); //4e en 5e
+                
+            }
+            xhr.open("GET", "http://localhost:8082/product/"+getypt.value , true); //2e
+            xhr.send(); //3e
+        });
+
+        document.getElementById("latenzien").addEventListener('click', function(){
+            var xhr = new XMLHttpRequest();  //1e
+            xhr.onreadystatechange = function (){ 
+                
+                //console.log("terug van de server"); //4e en 5e
+                if (this.readyState == 4 && this.status == 200) {
+      				document.getElementById("latenzien").innerHTML = this.responseText;
+    				}
+
+            }
+            xhr.open("GET", "http://localhost:8082/lijst", true); //2e
+            xhr.send(); //3e
+        });
+    });
+    
+
+</script>
+<style>
+
+
+    
+    
+</style>
+
+<div>
+    
+    <input type = "text" id = 'input'> 
+    <button id = 'deknop'> Toevoegen</button>
+    <button id = 'latenzien'>Laat zien!</button>
+    <div id="deuitkomst"></div> 
+</div>
+</html>
