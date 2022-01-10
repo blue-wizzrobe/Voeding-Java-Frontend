@@ -26,18 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-        document.getElementById("add_product").addEventListener('click', function(){
-            var xhr = new XMLHttpRequest();  //1e
-
-            var getypt = document.getElementById('product_name');
-            console.log("Je hebt " + getypt.value + " getypt");
-
-            xhr.onreadystatechange = function (){ 
-
-                //console.log("terug van de server"); //4e en 5e
-
-            }
-            xhr.open("GET", `http://localhost:8082/product/ ${getypt.value}`, true); //2e
-            xhr.send(); //3e
-        });
+    document.getElementById("add_product").addEventListener('click', function () {
+        var xhr = new XMLHttpRequest();
+        var input = document.getElementById('product_name').value.trim();
+        // xhr.onreadystatechange = function () {
+        //     //console.log("terug van de server");
+        // }
+        xhr.open("GET", `http://localhost:8082/product/${input}`, true);
+        xhr.send();
+        location.reload();
+    });
 });
