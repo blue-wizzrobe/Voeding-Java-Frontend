@@ -14,16 +14,12 @@
 
     <h1>Trends</h1>
 
+    <div w3-include-html="header.html"></div>
+
     <div id="lijst">
     </div>
 
-    <div class="btn-group" style="width: 100%">
-        <button onclick="gaNaarAnderePagina('index.html')" style="width:20%">Home</button>
-        <button onclick="gaNaarAnderePagina('recepten.html')" style="width:20%">Recepten</button>
-        <button onclick="gaNaarAnderePagina('trends.html')" style="width:20%">Trends</button>
-        <button onclick="gaNaarAnderePagina('inloggen.html')" style="width:20%" >Inloggen</button>
-        <button onclick="gaNaarAnderePagina('registreren.html')" style="width:20%">Registreren</button>
-    </div>
+   
 
     <div class="gerecht">
         <img src="gerecht.jpg" alt="Lekker gerecht" >
@@ -33,20 +29,21 @@
         <p>Ontdek welke recepten bij jou passen!</p>
     </div> 
 
-    <div class="footer">
+    <div class="alleReceptenKnop">
         <button onclick="receptenAantonen()">Toon alle recepten</button>
     </div> 
 
-    <div class="footer">
+    <div class="newReceptKnop">
         <button onclick="nieuweReceptAanmaken()">Nieuwe recept maken</button>
     </div> 
 
-    <div class="footer">
-
+    <div class="receptenInput">
         <input type = "text" id = 'input'>
     </div>
     
-
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>

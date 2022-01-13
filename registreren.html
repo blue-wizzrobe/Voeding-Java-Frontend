@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="receptfunctie.js"></script> 
+
+</head>
+    
+<body>
+
+    <h1>Registreren</h1>
+
+    <div w3-include-html="header.html"></div>
+
+    <h2>Voer je gegevens in</h2>
+
+    <div class="registreren">
+        <form>
+          <label for="vnaam">Voornaam</label><br>
+          <input type="text" id="fname" name="firstname"><br><br>
+
+          <label for="tvoegsel">Tussenvoegsel</label><br>
+          <input type="text" id="fname" name="firstname"><br><br>
+      
+          <label for="anaam">Achternaam</label><br>
+          <input type="text" id="lname" name="lastname"><br><br>
+      
+          <label for="eaddres">Emailadres</label><br><br>
+          <input type="text" id="lname" name="lastname" placeholder="voorbeeld@gmail.com"><br>
+
+          <label for="headdres">Herhaal emailadres</label><br><br>
+          <input type="text" id="lname" name="lastname"><br>
+        
+          <input type="submit" value="Versturen">
+        </form>
+      </div>  
+   
+    
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
