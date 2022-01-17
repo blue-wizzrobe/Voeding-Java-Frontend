@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetch('http://yc2112-backend.azurewebsites.net/receptenlijst')
+    fetch('https://yc2112-backend.azurewebsites.net/receptenlijst')
         .then(result => result.json())
         .then(products => {
             console.log(products);
