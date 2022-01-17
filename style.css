@@ -99,3 +99,11 @@ input[type=submit]:hover {
   left: 50%;
   transform: translate(-50%);
 }
+
+#tabel1 th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+#table1 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
