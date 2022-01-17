@@ -12,26 +12,30 @@
     
 <body>
 
-    <h1>Trends</h1>
+    <h1>Inloggen</h1>
+
+    <div w3-include-html="header.html"></div>
 
     <div id="lijst">
     </div>
 
-    <div class="btn-group" style="width: 100%">
-        <button onclick="gaNaarAnderePagina('index.html')" style="width:20%">Home</button>
-        <button onclick="gaNaarAnderePagina('recepten.html')" style="width:20%">Recepten</button>
-        <button onclick="gaNaarAnderePagina('trends.html')" style="width:20%">Trends</button>
-        <button onclick="gaNaarAnderePagina('inloggen.html')" style="width:20%" >Inloggen</button>
-        <button onclick="gaNaarAnderePagina('registreren.html')" style="width:20%">Registreren</button>
-    </div>
+    <h2>Voer je gegevens in</h2>
 
-    <div id="recept">
-        <input type="text" name="receptNaam" id="receptNaam">
-        <input type="text" name="bereidingstijd" id="bereidingstijd">
-        <button onclick="voegReceptToeAanUser()">Klikt Hier!</button>
+   
+
+    <div class="recept" id="recept">
+        <form>
+            <label for="recnaam">Receptnaam</label><br>
+            <input type="text" name="receptNaam" id="receptNaam"><br><br>
+            <label for="bertijd">Bereidingstijd</label><br>
+            <input type="text" name="bereidingstijd" id="bereidingstijd"><br><br>
+            <button class="klikHierKnop" onclick="voegReceptToeAanUser()">Klikt Hier!</button>
+        </form>
     </div>
     
-
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>

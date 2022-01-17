@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to bottom right, salmon, pink);
+    background-image: linear-gradient(to bottom , pink, salmon);
     background-repeat: no-repeat;
 }
 
@@ -10,11 +10,36 @@ body {
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
-  }
+    font-size: medium;
+    transition: all 0.5s;
+    cursor: pointer;
+    }
 
-.btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
+.btn-group button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+.btn-group button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+.btn-group button:hover span {
+      padding-right: 25px;
+    }
+
+.btn-group button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
    /* Clear floats (clearfix hack) */
 .btn-group:after {
     content: "";
@@ -40,4 +65,37 @@ footer{
   bottom: 0; 
   left:50%;
   margin-left:-50%;
+}
+
+input[type=text], select {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit], .klikHierKnop {
+  background-color: #fcb5d0;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  transition: #45a049;
+}
+
+.registreren, .recept {
+  border-radius: 5px;
+  background-color: rgb(250, 128, 114);
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
 }
