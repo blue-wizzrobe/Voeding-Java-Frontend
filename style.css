@@ -60,14 +60,23 @@ img{
   margin-right: 10%;
 }
 
-footer{
-  position:absolute;
+.footer{
   bottom: 0; 
   left:50%;
   margin-left:-50%;
 }
 
 input[type=text], select {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select{
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -106,4 +115,16 @@ input[type=submit]:hover {
 
 #table1 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.column {
+  float: right;
+  width: 33.33%;
+  padding: 0px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
