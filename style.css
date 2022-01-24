@@ -123,29 +123,6 @@ input[type=password], select{
   transform: translate(-50%);
 }
 
-.allRecipeButton{  
-  text-align: center;   
-  height: 10px;  
-  padding-top: 10px;  
-  }
-
-.allRecipeButton button{
-  background-color: lightskyblue; /* Green background */
-    border: none; /* Green border */
-    border-radius:  4px;
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    font-size: medium;
-    transition: all 0.5s;
-    cursor: pointer;
-    
-}
-
-.allRecipeButton button:hover {
-  background-color: transparent;
-  border: 2px solid lightskyblue;
- }
 
 .alleReceptenKnop {
   text-align: center;

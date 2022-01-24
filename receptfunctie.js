@@ -6,10 +6,11 @@ function toonAlleRecepten(deRecepten){
     console.log("HetWerkt");
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
-        console.log(this.responseText);
+        // console.log(this.responseText);
         if(this.readyState == 4){
             var lijstje = document.getElementById("lijst");
             antwoordObject = JSON.parse(this.responseText);
+            toevoegenAanTabel(antwoordObject);
             for(var x = 0; x < antwoordObject.length; x++){
                 lijstje.innerHTML+= "Hoi" + antwoordObject[x].naam ;
             }
@@ -48,3 +49,4 @@ function toonAlleRecepten(deRecepten){
       }
     }
    
+    
