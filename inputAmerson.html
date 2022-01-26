@@ -1,0 +1,36 @@
+<script>
+        //var url = "https://yc2112-backend.azurewebsites.net/receptaanuser";
+        var url = "http://localhost:8082/receptaanuser";
+    
+        function maakReceptAan(){
+            var userid = document.getElementById("fuserid").value;
+            var recept = {};
+            recept.beschrijving = document.getElementById("fbeschrijving").value;
+            recept.naam = document.getElementById("fnaam").value;
+            recept.bereidingstijd = document.getElementById("fbereidingstijd").value;
+            recept.bereiding = document.getElementById("fbereiding").value;
+            recept.afbeelding = document.getElementById("fafbeelding").value;
+            console.log(recept);
+            fetch(url+"/"+userid,{
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+                method: "POST",
+                body: JSON.stringify(recept)
+            })
+            .then(result => console.log(result))
+        }
+    </script>
+    
+    Userid:<input type=text id="fuserid">
+    <hr><hr>
+    
+    
+    Beschrijving:<input type=text id="fbeschrijving"><br>
+    Naam:<input type=text id="fnaam"><br>
+    Bereidingstijd:<input type=text id="fbereidingstijd"><br>
+    Bereiding:<input type=text id="fbereiding"><br>
+    Afbeelding:<input type=text id="fafbeelding"><br>
+    <input type=button value="MaakGerechtAan" onclick="maakReceptAan()">
+    
