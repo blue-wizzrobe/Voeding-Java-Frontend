@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("receptbeschrijving").innerHTML = productDetails.beschrijving;
             document.getElementById("receptbereidingstijd").innerHTML = productDetails.bereidingstijd + " minuten";
             document.getElementById("receptbereiding").innerHTML = productDetails.bereiding;
-            document.getElementById("receptafbeelding").src = productDetails.afbeelding;
+            document.getElementById("receptafbeelding").src = "afb/"+productDetails.afbeelding;
         });
 });
 
