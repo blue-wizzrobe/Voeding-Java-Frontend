@@ -16,30 +16,20 @@
     
 <body>
 
-    <h1 style="text-align: center;">Recepten</h1>
+    <h1 style="text-align: center;">Receptkaarten</h1>
 
-    <div w3-include-html="header.html"></div>
-
-
-    <div id="lijst">
-        
+    <div class="btn-group" style="width: 100%;">
+        <button onclick="gaNaarAnderePagina('index.html')" style="width:20%"><span>Home</span></button>
+        <button onclick="gaNaarAnderePagina('recepten.html')" style="width:20%"><span>Recepten</span></button>
+        <button onclick="gaNaarAnderePagina('trends.html')" style="width:20%"><span>Trends</span></button>
+        <button onclick="gaNaarAnderePagina('inloggen.html')" style="width:20%" ><span>Inloggen</span></button>
+        <button onclick="gaNaarAnderePagina('registreren.html')" style="width:20%"><span>Registreren</span></button>
     </div>
 
-    
-    <div class="gerecht">
-        <img src="gerecht.jpg" alt="Lekker gerecht" >
-    </div>
-    
-    
-    
-    <script>
-        includeHTML();
-    </script>
+    <div id="lijst"></div>
+
+    <script>includeHTML();</script>
   
-    <table id="table1" style="opacity: 0;">
-        
-
-    </table><br>
     <div class="recepten" id="overzicht">
 
     </div>

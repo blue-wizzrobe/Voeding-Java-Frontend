@@ -18,26 +18,21 @@
 
     <h1 style="text-align: center;">Inloggen</h1>
 
-    <div w3-include-html="header.html"></div>
+    <div w3-include-html="header.html"></div> 
 
-    <div id="lijst">
-    </div>
+    <div id="lijst"></div>
 
-    <h2 style="text-align: center;">Voer je gegevens in</h2>
+    <h2 style="text-align: center;">Voer je gegevens in</h2><br>
 
-   
-
-    <div class="recept" id="recept">
-        <form>
-            <label for="recnaam">Receptnaam</label><br>
-            <input type="text" name="receptNaam" id="receptNaam"><br><br>
-            <label for="bertijd">Bereidingstijd</label><br>
-            <input type="text" name="bereidingstijd" id="bereidingstijd"><br><br>
+   <div class="recept" id="recept">
+            <label for="gebnaam">Gebruikersnaam</label><br>
+            <input type="text" name="gebruikersNaam" id="gebruikersNaam"><br><br>
+            <label for="bertijd">Wachtwoord</label><br>
+            <input type="password" name="wachtWoord" id="wachtWoord"><br><br>
             <div class="klikHierKnop">
-                <button onclick="voegReceptToeAanUser()">Klikt Hier!</button>
+                <button onclick="voegReceptToeAanUser()">Log in</button>
             </div>
-        </form>
-    </div>
+    </div><br>
     
     <script>
         includeHTML();

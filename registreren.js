@@ -1,3 +1,7 @@
+function gaNaarAnderePagina(dePagina){
+  window.location=dePagina;
+}
+
 function maakGebruiker() {
     let url  = "https://yc2112-backend.azurewebsites.net/users";
     let name = document.getElementById("fname").value;
