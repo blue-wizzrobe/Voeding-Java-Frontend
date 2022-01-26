@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(products);
             //appendToTable(products, "table1");
             toevoegenAanTabel(products);
+        })
         .then(recepten => {
             toevoegenAanTabel(recepten);
-        });
+        })
 });
 
 function toevoegenAanTabel(recepten) {
