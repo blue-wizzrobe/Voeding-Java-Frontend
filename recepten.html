@@ -23,31 +23,84 @@
 
 
     <div id="lijst">
-        
     </div>
 
     
-    <div class="gerecht">
-        <img src="gerecht.jpg" alt="Lekker gerecht" >
+    
+    <!--div class="gerecht">
+        <img src="gerecht.jpg" alt="Lekker gerecht" style="float:right">
+    </div-->
+    
+    <script>
+        var url = "https://yc2112-backend.azurewebsites.net/receptaanuser";
+        //var url = "http://localhost:8082/receptaanuser";
+    
+        function maakReceptAan(){
+            var userid = document.getElementById("fuserid").value;
+            var recept = {};
+            recept.beschrijving = document.getElementById("fbeschrijving").value;
+            recept.naam = document.getElementById("fnaam").value;
+            recept.bereidingstijd = document.getElementById("fbereidingstijd").value;
+            recept.bereiding = document.getElementById("fbereiding").value;
+            recept.afbeelding = document.getElementById("fafbeelding").value;
+            console.log(recept);
+            fetch(url+"/"+userid,{
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+                method: "POST",
+                body: JSON.stringify(recept)
+            })
+            .then(result => console.log(result))
+        }
+    </script>
+    
+            
     </div>
-    
-    
-    
+        <div class="row"><div class="col-sm-3">
+    <div class="receptInput" id="receptInput">
+        
+            <label for="Userid">UserID</label><br>
+            <input type=text id="fuserid"><br><br>
+                                
+            <label for="description">Beschrijving</label><br>
+            <input type="text" id="fbeschrijving" name="receptBeschrijving"><br><br>
+        
+            <label for="name">Naam</label><br>
+            <input type="text" id="fnaam" name="description"><br><br>
+            
+            <label for="bertijd">Bereidingstijd</label><br>
+            <input type="text" id="fbereidingstijd" name="bereidingstijd"><br><br>
+
+            <label for="cooking">Bereiding</label><br>
+            <input type="text" id="fbereiding" name="cooking"><br>
+
+            <label for="picture">Afbeelding</label><br>
+            <input type="text" id="fafbeelding" name="picture"><br><br>
+
+            <div class="klikHierKnop">
+                <button value="MaakGerechtAan" onclick="maakReceptAan()">Voeg uw recept toe!</button>
+            </div>
+    </div></div>
+        <div class="col-sm-9">
     <script>
         includeHTML();
     </script>
   
-    <table id="table1" style="opacity: 0;">
+    <table id="table1">
         
-
     </table><br>
     <div class="receptenTabel" id="overzicht">
-        <div class="row">
-            <div class="col-sm-3" style="font-weight: 600;">Bereidingstijd</div>
-            <div class="col-sm-3" style="font-weight: 600;">Naam</div>
-            <div class="col-sm-6" style="font-weight: 600;">Beschrijving</div>
+                <div class="row">
+                    <div class="col-sm-3" style="font-weight: 600;">Bereidingstijd</div>
+                    <div class="col-sm-3" style="font-weight: 600;">Naam</div>
+                    <div class="col-sm-6" style="font-weight: 600;">Beschrijving</div>
+                </div>
+    </div>
         </div>
     </div>
+</div>
     <div class="bottomText">
         <p>Ontdek welke recepten bij jou passen!</p>
     </div> 

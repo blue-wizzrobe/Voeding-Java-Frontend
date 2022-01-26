@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(result => result.json())
         .then(products => {
             console.log(products);
-            appendToTable(products, "table1");
+            //appendToTable(products, "table1");
             toevoegenAanTabel(products);
         });
 

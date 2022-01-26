@@ -10,7 +10,7 @@ body {
 
 .btn-group button {
     background-color: transparent; /* Green background */
-    border: 1px solid transparent; /* Green border */
+    border: 1px solid lightskyblue; /* Green border */
     border-color: none;
     border-radius: 4px;
     color: black; /* White text */
@@ -20,6 +20,8 @@ body {
     font-size: medium;
     transition: all 0.5s;
     cursor: pointer;
+    text-align: center;
+    width: 100%;
     }
 
 .btn-group button span {
@@ -55,7 +57,7 @@ body {
   }
   /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #fcb5d0;
+    background-color: lightskyblue;
     border: 1px lightskyblue;
     font-weight: bold;
     }
@@ -63,16 +65,9 @@ body {
 img{
   border-radius: 50px;
   width: 324px;
-  float: right;
   margin-right: 10%;
 }
 
-footer{
-  position:absolute;
-  bottom: 0; 
-  left:50%;
-  margin-left:-50%;
-}
 
 input[type=text], select {
   width: 300px;
@@ -172,10 +167,17 @@ input[type=password], select{
 }
 
 .bottomText{
-  position: fixed;
   text-align: center;
   bottom: 5px;
   width: 100%;
   font-size: xx-large;
   background: salmon;
+ }
+
+.receptInput {
+  padding: 50px;
+}
+
+.receptenTabel{
+  padding: 50px;
 }
