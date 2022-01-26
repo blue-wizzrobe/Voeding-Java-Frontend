@@ -62,7 +62,12 @@
     <div class="receptInput" id="receptInput">
         
             <label for="Userid">UserID</label><br>
-            <input type=text id="fuserid"><br><br>
+            <select type=text id="fuserid">
+                <option value="0">User 0</option>
+                <option value="1">User 1</option>
+                <option value="2">User 2</option>
+                <option value="3">User 3</option>
+              </select><br><br>
                                 
             <label for="description">Beschrijving</label><br>
             <input type="text" id="fbeschrijving" name="receptBeschrijving"><br><br>
@@ -81,6 +86,10 @@
 
             <div class="klikHierKnop">
                 <button value="MaakGerechtAan" onclick="maakReceptAan()">Voeg uw recept toe!</button>
+            </div>
+            <br>
+            <div class="klikHierKnop">
+                <button value="GaNaarOverzicht" onclick="gaNaarAnderePagina('receptkaarten.html')">Overzicht receptkaarten</button>
             </div>
     </div></div>
         <div class="col-sm-9">

@@ -1,3 +1,6 @@
+function gaNaarAnderePagina(dePagina){
+    window.location=dePagina;
+  }
 document.addEventListener("DOMContentLoaded", function () {
 
     fetch('https://yc2112-backend.azurewebsites.net/receptenlijst')
