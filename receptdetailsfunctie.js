@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const queryString = window.location.search;
   const userid = new URLSearchParams(queryString).get('receptid');
   console.log(userid);
+  fetch('http://yc2112-backend.azurewebsites.net/getReceptById/'+userid)
+        .then(result => result.json())
+        .then(productDetails => {
+            console.log(productDetails);
+            document.getElementById("recepttitel").innerHTML = productDetails.naam;
+            document.getElementById("receptbeschrijving").innerHTML = productDetails.beschrijving;
+            document.getElementById("receptbereidingstijd").innerHTML = productDetails.bereidingstijd + " minuten";
+            document.getElementById("receptbereiding").innerHTML = productDetails.bereiding;
+            document.getElementById("receptafbeelding").src = "afb/"+productDetails.afbeelding;
+        });
 });
 
 
